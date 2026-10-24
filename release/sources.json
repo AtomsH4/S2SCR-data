@@ -1,0 +1,99 @@
+{
+  "coordinate_convention": "zero-based, stop-exclusive",
+  "sources": [
+    {
+      "name": "WV2 calibration input",
+      "provider": "PanCollection",
+      "url": "https://github.com/liangjiandeng/PanCollection",
+      "sample": "Test(HxWxC)_wv2_data_fr5.mat",
+      "sample_url": "https://drive.google.com/file/d/1knAstMixTs15BBdWKSPjOeDaa4XTN_X1/view",
+      "numerical_relationship": "lrhsi equals public ms exactly; hrmsi equals public pan converted to float32, divided by float32(2047), and replicated into 3 identical channels.",
+      "full_array_numerical_correspondence_verified": true
+    },
+    {
+      "name": "Pavia University processed reference",
+      "provider": "NUD_PAF",
+      "url": "https://github.com/jeline0110/NUD_PAF/blob/2bbc506a982610c7b071a5c43000b84d6f7c959e/datasets/paviau.mat",
+      "reference_shape": [
+        324,
+        324,
+        103
+      ],
+      "processed_distribution_file_identity_verified": true,
+      "original_scene_crop_origin_verified": false
+    },
+    {
+      "name": "Chikusei",
+      "provider": "University of Tokyo / Naoto Yokoya",
+      "url": "https://naotoyokoya.com/Download.html",
+      "full_scene_shape": [
+        2517,
+        2335,
+        128
+      ],
+      "reference_crop_zero_based_stop_exclusive": {
+        "rows": [
+          1500,
+          1932
+        ],
+        "columns": [
+          1500,
+          1932
+        ],
+        "bands": [
+          0,
+          128
+        ]
+      },
+      "reference_normalization": "float64 crop / 6768.0",
+      "source_comparison": "element-wise exact in original source audit",
+      "license": "CC-BY-3.0"
+    },
+    {
+      "name": "Washington DC Mall",
+      "provider": "Purdue University MultiSpec",
+      "url": "https://engineering.purdue.edu/~biehl/MultiSpec/hyperspectral.html",
+      "full_scene_shape": [
+        1280,
+        307,
+        191
+      ],
+      "reference_crop_zero_based_stop_exclusive": {
+        "rows": [
+          980,
+          1280
+        ],
+        "columns": [
+          0,
+          300
+        ],
+        "bands": [
+          0,
+          191
+        ]
+      },
+      "reference_normalization": "float64 (crop - (-401)) / (21311 - (-401))",
+      "source_comparison_max_absolute_error": 3.3306690738754696e-16,
+      "provider_use_statement": "Free to use for testing and/or research."
+    },
+    {
+      "name": "Sentinel-2A spectral response functions",
+      "provider": "Copernicus SentiWiki",
+      "url": "https://sentiwiki.copernicus.eu/web/s2-documents",
+      "version": "2024 v4.0",
+      "msi_bands": [
+        "B2",
+        "B3",
+        "B4",
+        "B8"
+      ],
+      "simulated_hsi_grid_nm": {
+        "start": 430,
+        "stop": 900,
+        "count": 89,
+        "spacing": "uniform_assumption"
+      },
+      "srf_constraints": "Nonnegative, row-normalized."
+    }
+  ]
+}

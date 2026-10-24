@@ -1,0 +1,873 @@
+{
+  "schema_version": 1,
+  "title": "S2SCR curated fusion data",
+  "version": "1.0.0",
+  "repository_url": "https://github.com/AtomsH4/S2SCR-data",
+  "created_at_utc": "2026-10-24T08:30:18.100767+00:00",
+  "scope": "Nine curated scene/setting combinations and three degradation-estimation input pairs.",
+  "case_count": 9,
+  "calibration_input_count": 3,
+  "data_files": [
+    {
+      "path": "release/observations/simx4/paviau.mat.zip",
+      "bytes": 40959576,
+      "sha256": "c5a42190960726e10e14d115d5e3f5148e2659d08e112f949ec22a58358379ae",
+      "archive_member": "paviau_simx4.mat",
+      "uncompressed_mat_sha256": "1f5e3b7fccf08bd4527f23c81bade2fa237cbd654bab9628e8a19f4b74013f43"
+    },
+    {
+      "path": "release/observations/simx4/chikusei.mat.zip",
+      "bytes": 67093290,
+      "sha256": "bb94115b877cea2323cfd51c4285ab53761e5f8b4842641a06a674f3c5f423c7",
+      "archive_member": "chikusei_simx4.mat",
+      "uncompressed_mat_sha256": "b63660e68dc8cf887be479f83eaae0146c8dde5df6ef164c180b211d7dab2ce0"
+    },
+    {
+      "path": "release/observations/simx4/wadc.mat.zip",
+      "bytes": 36690927,
+      "sha256": "852b549d5e3098b51c4d06986da847a0fee7392e6483d3de2936f1eb810cdd7c",
+      "archive_member": "wadc_simx4.mat",
+      "uncompressed_mat_sha256": "cd9fc79dd9c14f7b5f1078bdfa224952f8ba6daa9d60d0bfcf82198ea3735998"
+    },
+    {
+      "path": "release/observations/simx8/paviau.mat.zip",
+      "bytes": 39456815,
+      "sha256": "e192540cadbc7dd0f6a6569a53f60f48fd6055df0ddf87019f9ee50be46ef4a6",
+      "archive_member": "paviau_simx8.mat",
+      "uncompressed_mat_sha256": "d0b533ba6201a289ad79047647a133c3ff93df8d5186710449f734fcb313b42e"
+    },
+    {
+      "path": "release/observations/simx8/chikusei.mat.zip",
+      "bytes": 50956320,
+      "sha256": "62f1e00195f73b0effed39983fcf447a983fcf1c940be9a2715caffc35bfedcd",
+      "archive_member": "chikusei_simx8.mat",
+      "uncompressed_mat_sha256": "becd209db5a1d915fefe510d0fb87a4627ff39ad07ab876f011541a4e429a97a"
+    },
+    {
+      "path": "release/observations/simx8/wadc.mat.zip",
+      "bytes": 28048663,
+      "sha256": "cafc6d8932daec3438118cad91223d37b0a7c00bf8b86910fc9a4b6930c77134",
+      "archive_member": "wadc_simx8.mat",
+      "uncompressed_mat_sha256": "478b0f88a2d2c9124838e0e2a942246e7c4ca23d4b8835310a31411f63fca659"
+    },
+    {
+      "path": "release/observations/wv2/paviau.npz",
+      "bytes": 2788448,
+      "sha256": "bad62af80f9488b5ffce1156acd67ce52f5e48dfe44ffacfc29d97d41d8da479"
+    },
+    {
+      "path": "release/observations/wv2/chikusei.npz",
+      "bytes": 4293117,
+      "sha256": "713d8ac2a9846868a309ad59ae6894360e874a4ffe0a9aeec287fec688a33f9e"
+    },
+    {
+      "path": "release/observations/wv2/wadc.npz",
+      "bytes": 1871976,
+      "sha256": "fd291d5dd2f010c55e440e2f875c08e5126b20291996e3676c38a87e584b844f"
+    },
+    {
+      "path": "release/calibration/simx4.mat",
+      "bytes": 3919360,
+      "sha256": "9d22c5681527caa2ec86990c56f42635c61cfc2e1b920efad781c694f5f9501d",
+      "role": "degradation_estimation_input"
+    },
+    {
+      "path": "release/calibration/simx8.mat",
+      "bytes": 2211264,
+      "sha256": "ed58af1a2138f38d31606d1d839153b9619d55f6bf7e29565a4272a8df404c6a",
+      "role": "degradation_estimation_input"
+    },
+    {
+      "path": "release/calibration/wv2.mat",
+      "bytes": 3408144,
+      "sha256": "535df8cc9b06237f3b2de430466e5984ee9f72c38b9b743c62704035a6efad5a",
+      "role": "degradation_estimation_input"
+    }
+  ],
+  "cases": [
+    {
+      "dataset": "paviau",
+      "setting": "simx4",
+      "format": "zipped_mat",
+      "path": "release/observations/simx4/paviau.mat.zip",
+      "archive_member": "paviau_simx4.mat",
+      "arrays": {
+        "gt": {
+          "shape": [
+            320,
+            320,
+            89
+          ],
+          "dtype": "float32",
+          "c_order_array_sha256": "28a91eab6298decb4f13ec05785f0ca941d391d0e8bb8a3643e913e5396c7066"
+        },
+        "hrhsi": {
+          "shape": [
+            320,
+            320,
+            89
+          ],
+          "dtype": "float32",
+          "c_order_array_sha256": "28a91eab6298decb4f13ec05785f0ca941d391d0e8bb8a3643e913e5396c7066"
+        },
+        "lrhsi": {
+          "shape": [
+            80,
+            80,
+            89
+          ],
+          "dtype": "float32",
+          "c_order_array_sha256": "be5871084a24ffe4e7c75048b214db97218b7681d716558a329983870eaf7b8b"
+        },
+        "hrmsi": {
+          "shape": [
+            320,
+            320,
+            4
+          ],
+          "dtype": "float32",
+          "c_order_array_sha256": "e31b24c2f51bec3bd1560e68bf9a6537fb93e66342a61c7a8f2a1bb7268b51d5"
+        },
+        "psf": {
+          "shape": [
+            7,
+            7
+          ],
+          "dtype": "float32",
+          "c_order_array_sha256": "c457f37b665a62ff4ba3b789631be692618f8f75ef2a135450e1f19eb2f415c0"
+        },
+        "srf": {
+          "shape": [
+            4,
+            89
+          ],
+          "dtype": "float32",
+          "c_order_array_sha256": "e2a5d0fd58953bd778003d3fa5081831dcc1d57115ee002140f2c625b4482ee2"
+        }
+      },
+      "scale": 4,
+      "preprocessing": {
+        "cast_before_normalization": "float32",
+        "normalization": "(source - source.min()) / (source.max() - source.min()) before cropping",
+        "minimum": 0.0,
+        "maximum": 1.0,
+        "rows": [
+          0,
+          320
+        ],
+        "columns": [
+          0,
+          320
+        ],
+        "bands": [
+          4,
+          93
+        ],
+        "spatial_alignment": 16,
+        "exact_array_match": true
+      },
+      "array_layout": "HWC",
+      "input_pair": [
+        "lrhsi",
+        "hrmsi"
+      ],
+      "reference_field": "hrhsi",
+      "selected_final_run_input_identity_verified": false
+    },
+    {
+      "dataset": "chikusei",
+      "setting": "simx4",
+      "format": "zipped_mat",
+      "path": "release/observations/simx4/chikusei.mat.zip",
+      "archive_member": "chikusei_simx4.mat",
+      "arrays": {
+        "gt": {
+          "shape": [
+            432,
+            432,
+            89
+          ],
+          "dtype": "float32",
+          "c_order_array_sha256": "7bfc4e67add89cd480e166b2c148cd45ea584ba6d3751878cbae1981f0ca83fd"
+        },
+        "hrhsi": {
+          "shape": [
+            432,
+            432,
+            89
+          ],
+          "dtype": "float32",
+          "c_order_array_sha256": "7bfc4e67add89cd480e166b2c148cd45ea584ba6d3751878cbae1981f0ca83fd"
+        },
+        "lrhsi": {
+          "shape": [
+            108,
+            108,
+            89
+          ],
+          "dtype": "float32",
+          "c_order_array_sha256": "db83ccba4874ca951796501012a97b6938e8ccb6830fcdb38678bae6567d34d0"
+        },
+        "hrmsi": {
+          "shape": [
+            432,
+            432,
+            4
+          ],
+          "dtype": "float32",
+          "c_order_array_sha256": "5ea4aa46b142afada6b4c0cb43e83c7fbb8e5dfb9a64ac96a90c9ec179a23b1a"
+        },
+        "psf": {
+          "shape": [
+            7,
+            7
+          ],
+          "dtype": "float32",
+          "c_order_array_sha256": "c457f37b665a62ff4ba3b789631be692618f8f75ef2a135450e1f19eb2f415c0"
+        },
+        "srf": {
+          "shape": [
+            4,
+            89
+          ],
+          "dtype": "float32",
+          "c_order_array_sha256": "e2a5d0fd58953bd778003d3fa5081831dcc1d57115ee002140f2c625b4482ee2"
+        }
+      },
+      "scale": 4,
+      "preprocessing": {
+        "cast_before_normalization": "float32",
+        "normalization": "(source - source.min()) / (source.max() - source.min()) before cropping",
+        "minimum": 0.0,
+        "maximum": 1.0,
+        "rows": [
+          0,
+          432
+        ],
+        "columns": [
+          0,
+          432
+        ],
+        "bands": [
+          11,
+          100
+        ],
+        "spatial_alignment": 16,
+        "exact_array_match": true
+      },
+      "array_layout": "HWC",
+      "input_pair": [
+        "lrhsi",
+        "hrmsi"
+      ],
+      "reference_field": "hrhsi",
+      "selected_final_run_input_identity_verified": false
+    },
+    {
+      "dataset": "wadc",
+      "setting": "simx4",
+      "format": "zipped_mat",
+      "path": "release/observations/simx4/wadc.mat.zip",
+      "archive_member": "wadc_simx4.mat",
+      "arrays": {
+        "gt": {
+          "shape": [
+            288,
+            288,
+            89
+          ],
+          "dtype": "float32",
+          "c_order_array_sha256": "7762057f96810829d6fa9a44982fde95522b729d3d3ffc6f607ac9ca285399b1"
+        },
+        "hrhsi": {
+          "shape": [
+            288,
+            288,
+            89
+          ],
+          "dtype": "float32",
+          "c_order_array_sha256": "7762057f96810829d6fa9a44982fde95522b729d3d3ffc6f607ac9ca285399b1"
+        },
+        "lrhsi": {
+          "shape": [
+            72,
+            72,
+            89
+          ],
+          "dtype": "float32",
+          "c_order_array_sha256": "b95c4bff2b9b826f33a09f1d4ebb4c1c1a36f39f4b7487dbe7d5df7abf4ffd05"
+        },
+        "hrmsi": {
+          "shape": [
+            288,
+            288,
+            4
+          ],
+          "dtype": "float32",
+          "c_order_array_sha256": "cfee26cbcf3f16a9a3d5da6ac1be162846f4d9b595a70464bac8eb7ff504ba4d"
+        },
+        "psf": {
+          "shape": [
+            7,
+            7
+          ],
+          "dtype": "float32",
+          "c_order_array_sha256": "c457f37b665a62ff4ba3b789631be692618f8f75ef2a135450e1f19eb2f415c0"
+        },
+        "srf": {
+          "shape": [
+            4,
+            89
+          ],
+          "dtype": "float32",
+          "c_order_array_sha256": "e2a5d0fd58953bd778003d3fa5081831dcc1d57115ee002140f2c625b4482ee2"
+        }
+      },
+      "scale": 4,
+      "preprocessing": {
+        "cast_before_normalization": "float32",
+        "normalization": "(source - source.min()) / (source.max() - source.min()) before cropping",
+        "minimum": 0.0,
+        "maximum": 1.0,
+        "rows": [
+          0,
+          288
+        ],
+        "columns": [
+          0,
+          288
+        ],
+        "bands": [
+          29,
+          118
+        ],
+        "spatial_alignment": 16,
+        "exact_array_match": true
+      },
+      "array_layout": "HWC",
+      "input_pair": [
+        "lrhsi",
+        "hrmsi"
+      ],
+      "reference_field": "hrhsi",
+      "selected_final_run_input_identity_verified": false
+    },
+    {
+      "dataset": "paviau",
+      "setting": "simx8",
+      "format": "zipped_mat",
+      "path": "release/observations/simx8/paviau.mat.zip",
+      "archive_member": "paviau_simx8.mat",
+      "arrays": {
+        "gt": {
+          "shape": [
+            320,
+            320,
+            89
+          ],
+          "dtype": "float32",
+          "c_order_array_sha256": "28a91eab6298decb4f13ec05785f0ca941d391d0e8bb8a3643e913e5396c7066"
+        },
+        "hrhsi": {
+          "shape": [
+            320,
+            320,
+            89
+          ],
+          "dtype": "float32",
+          "c_order_array_sha256": "28a91eab6298decb4f13ec05785f0ca941d391d0e8bb8a3643e913e5396c7066"
+        },
+        "lrhsi": {
+          "shape": [
+            40,
+            40,
+            89
+          ],
+          "dtype": "float32",
+          "c_order_array_sha256": "117234038e6bf697af8841e8efa995457e27fc3ba1e64080b18751ea239ce085"
+        },
+        "hrmsi": {
+          "shape": [
+            320,
+            320,
+            4
+          ],
+          "dtype": "float32",
+          "c_order_array_sha256": "e31b24c2f51bec3bd1560e68bf9a6537fb93e66342a61c7a8f2a1bb7268b51d5"
+        },
+        "psf": {
+          "shape": [
+            15,
+            15
+          ],
+          "dtype": "float32",
+          "c_order_array_sha256": "b81e8ff3d509f56bcb01c683d4ff79e9a4403769e04712430193c24f0e3bedbc"
+        },
+        "srf": {
+          "shape": [
+            4,
+            89
+          ],
+          "dtype": "float32",
+          "c_order_array_sha256": "e2a5d0fd58953bd778003d3fa5081831dcc1d57115ee002140f2c625b4482ee2"
+        }
+      },
+      "scale": 8,
+      "preprocessing": {
+        "cast_before_normalization": "float32",
+        "normalization": "(source - source.min()) / (source.max() - source.min()) before cropping",
+        "minimum": 0.0,
+        "maximum": 1.0,
+        "rows": [
+          0,
+          320
+        ],
+        "columns": [
+          0,
+          320
+        ],
+        "bands": [
+          4,
+          93
+        ],
+        "spatial_alignment": 64,
+        "exact_array_match": true
+      },
+      "array_layout": "HWC",
+      "input_pair": [
+        "lrhsi",
+        "hrmsi"
+      ],
+      "reference_field": "hrhsi",
+      "selected_final_run_input_identity_verified": false
+    },
+    {
+      "dataset": "chikusei",
+      "setting": "simx8",
+      "format": "zipped_mat",
+      "path": "release/observations/simx8/chikusei.mat.zip",
+      "archive_member": "chikusei_simx8.mat",
+      "arrays": {
+        "gt": {
+          "shape": [
+            384,
+            384,
+            89
+          ],
+          "dtype": "float32",
+          "c_order_array_sha256": "20c3592a732a7160adda5d4cd393adc1bd92ebf3e2a5a160976a5756af67114f"
+        },
+        "hrhsi": {
+          "shape": [
+            384,
+            384,
+            89
+          ],
+          "dtype": "float32",
+          "c_order_array_sha256": "20c3592a732a7160adda5d4cd393adc1bd92ebf3e2a5a160976a5756af67114f"
+        },
+        "lrhsi": {
+          "shape": [
+            48,
+            48,
+            89
+          ],
+          "dtype": "float32",
+          "c_order_array_sha256": "dfdb1ad535f4d205c108e169c5a6d62a3cc589f8bb5923ac45610b9f7bb41756"
+        },
+        "hrmsi": {
+          "shape": [
+            384,
+            384,
+            4
+          ],
+          "dtype": "float32",
+          "c_order_array_sha256": "8d7b77d8ee3246567e35dc287570a07b336de8ce023f21c9bf84a95f78a0dc93"
+        },
+        "psf": {
+          "shape": [
+            15,
+            15
+          ],
+          "dtype": "float32",
+          "c_order_array_sha256": "b81e8ff3d509f56bcb01c683d4ff79e9a4403769e04712430193c24f0e3bedbc"
+        },
+        "srf": {
+          "shape": [
+            4,
+            89
+          ],
+          "dtype": "float32",
+          "c_order_array_sha256": "e2a5d0fd58953bd778003d3fa5081831dcc1d57115ee002140f2c625b4482ee2"
+        }
+      },
+      "scale": 8,
+      "preprocessing": {
+        "cast_before_normalization": "float32",
+        "normalization": "(source - source.min()) / (source.max() - source.min()) before cropping",
+        "minimum": 0.0,
+        "maximum": 1.0,
+        "rows": [
+          0,
+          384
+        ],
+        "columns": [
+          0,
+          384
+        ],
+        "bands": [
+          11,
+          100
+        ],
+        "spatial_alignment": 64,
+        "exact_array_match": true
+      },
+      "array_layout": "HWC",
+      "input_pair": [
+        "lrhsi",
+        "hrmsi"
+      ],
+      "reference_field": "hrhsi",
+      "selected_final_run_input_identity_verified": false
+    },
+    {
+      "dataset": "wadc",
+      "setting": "simx8",
+      "format": "zipped_mat",
+      "path": "release/observations/simx8/wadc.mat.zip",
+      "archive_member": "wadc_simx8.mat",
+      "arrays": {
+        "gt": {
+          "shape": [
+            256,
+            256,
+            89
+          ],
+          "dtype": "float32",
+          "c_order_array_sha256": "4a5d5bbaaf15b0433368c22e75523097fde199a31b7e75d4eda1902ae2a660c2"
+        },
+        "hrhsi": {
+          "shape": [
+            256,
+            256,
+            89
+          ],
+          "dtype": "float32",
+          "c_order_array_sha256": "4a5d5bbaaf15b0433368c22e75523097fde199a31b7e75d4eda1902ae2a660c2"
+        },
+        "lrhsi": {
+          "shape": [
+            32,
+            32,
+            89
+          ],
+          "dtype": "float32",
+          "c_order_array_sha256": "a8bac419e33fb27cc067852792aa04833de59a9662a906739da6245804a6eb3a"
+        },
+        "hrmsi": {
+          "shape": [
+            256,
+            256,
+            4
+          ],
+          "dtype": "float32",
+          "c_order_array_sha256": "e1d33c585ab9caed631669ab40c1e925205dbb99f470878e9eb3f78468bcf685"
+        },
+        "psf": {
+          "shape": [
+            15,
+            15
+          ],
+          "dtype": "float32",
+          "c_order_array_sha256": "b81e8ff3d509f56bcb01c683d4ff79e9a4403769e04712430193c24f0e3bedbc"
+        },
+        "srf": {
+          "shape": [
+            4,
+            89
+          ],
+          "dtype": "float32",
+          "c_order_array_sha256": "e2a5d0fd58953bd778003d3fa5081831dcc1d57115ee002140f2c625b4482ee2"
+        }
+      },
+      "scale": 8,
+      "preprocessing": {
+        "cast_before_normalization": "float32",
+        "normalization": "(source - source.min()) / (source.max() - source.min()) before cropping",
+        "minimum": 0.0,
+        "maximum": 1.0,
+        "rows": [
+          0,
+          256
+        ],
+        "columns": [
+          0,
+          256
+        ],
+        "bands": [
+          29,
+          118
+        ],
+        "spatial_alignment": 64,
+        "exact_array_match": true
+      },
+      "array_layout": "HWC",
+      "input_pair": [
+        "lrhsi",
+        "hrmsi"
+      ],
+      "reference_field": "hrhsi",
+      "selected_final_run_input_identity_verified": false
+    },
+    {
+      "dataset": "paviau",
+      "setting": "wv2",
+      "format": "npz",
+      "path": "release/observations/wv2/paviau.npz",
+      "arrays": {
+        "hrhsi": {
+          "shape": [
+            320,
+            320,
+            8
+          ],
+          "dtype": "float32",
+          "c_order_array_sha256": "b5463b45057a48a6c9a53bc1ba46aad06a156e8d0bb38801faecb3e95d1157c0"
+        },
+        "lrhsi": {
+          "shape": [
+            80,
+            80,
+            8
+          ],
+          "dtype": "float32",
+          "c_order_array_sha256": "cac8f0d67b5a99ece6ed41bf2d237d53322f788c2b076533137ca1b571b7249d"
+        },
+        "hrmsi": {
+          "shape": [
+            320,
+            320,
+            3
+          ],
+          "dtype": "float32",
+          "c_order_array_sha256": "0399fe17d4245a8a89ad98aeb9b6dffa6c2ec86fd82d59720671b0f25d760180"
+        },
+        "lr2hsi": {
+          "shape": [
+            20,
+            20,
+            8
+          ],
+          "dtype": "float32",
+          "c_order_array_sha256": "de392b58a0aaa050e9ed558c81eca40908866a4faab0c3e6bfa77e2762efd20a"
+        },
+        "lrmsi": {
+          "shape": [
+            80,
+            80,
+            3
+          ],
+          "dtype": "float32",
+          "c_order_array_sha256": "9ceed43c1da72f067d414e73a22d2b095d0f2969c0b9b30b4ce93f8425d569ac"
+        }
+      },
+      "observation_source_run_id": "paviau_wv2_20260731_032253",
+      "scale": 4,
+      "preprocessing": {
+        "rows": [
+          0,
+          320
+        ],
+        "columns": [
+          0,
+          320
+        ],
+        "bands": [
+          0,
+          8
+        ],
+        "cast": "float32",
+        "additional_normalization": false,
+        "exact_array_match": true
+      },
+      "array_layout": "HWC",
+      "input_pair": [
+        "lrhsi",
+        "hrmsi"
+      ],
+      "reference_field": "hrhsi",
+      "selected_final_run_input_identity_verified": false
+    },
+    {
+      "dataset": "chikusei",
+      "setting": "wv2",
+      "format": "npz",
+      "path": "release/observations/wv2/chikusei.npz",
+      "arrays": {
+        "hrhsi": {
+          "shape": [
+            432,
+            432,
+            8
+          ],
+          "dtype": "float32",
+          "c_order_array_sha256": "551838fe19c435518e0e3a5c6b1d7de98d9427d9408cfe33912112f4690b3f3b"
+        },
+        "lrhsi": {
+          "shape": [
+            108,
+            108,
+            8
+          ],
+          "dtype": "float32",
+          "c_order_array_sha256": "e23d83abe4f96dc340fe7751a185c2d3a3d1cb3d55830fb8e9901ba12b68ea79"
+        },
+        "hrmsi": {
+          "shape": [
+            432,
+            432,
+            3
+          ],
+          "dtype": "float32",
+          "c_order_array_sha256": "32a166ccec613932c9d376916ed40ffe4d585b481eccb996a4671ad488f6f6e9"
+        },
+        "lr2hsi": {
+          "shape": [
+            27,
+            27,
+            8
+          ],
+          "dtype": "float32",
+          "c_order_array_sha256": "e486d4eefced88ce0b2d1f5d7954e71f18fac6b37efbad9b7d57d142f7e20b1a"
+        },
+        "lrmsi": {
+          "shape": [
+            108,
+            108,
+            3
+          ],
+          "dtype": "float32",
+          "c_order_array_sha256": "f6a742ded16892afe641ca6d83bb87fa3f58aa407c168d7eb34da5f590ee3c60"
+        }
+      },
+      "observation_source_run_id": "chikusei_wv2_20260731_053746",
+      "scale": 4,
+      "preprocessing": {
+        "rows": [
+          0,
+          432
+        ],
+        "columns": [
+          0,
+          432
+        ],
+        "bands": [
+          0,
+          8
+        ],
+        "cast": "float32",
+        "additional_normalization": false,
+        "exact_array_match": true
+      },
+      "array_layout": "HWC",
+      "input_pair": [
+        "lrhsi",
+        "hrmsi"
+      ],
+      "reference_field": "hrhsi",
+      "selected_final_run_input_identity_verified": false
+    },
+    {
+      "dataset": "wadc",
+      "setting": "wv2",
+      "format": "npz",
+      "path": "release/observations/wv2/wadc.npz",
+      "arrays": {
+        "hrhsi": {
+          "shape": [
+            288,
+            288,
+            8
+          ],
+          "dtype": "float32",
+          "c_order_array_sha256": "cf3e32bf204b95b7b7ae4060fa0d1a16eae1ad77161a0c8e4fbdbcfe167b91f6"
+        },
+        "lrhsi": {
+          "shape": [
+            72,
+            72,
+            8
+          ],
+          "dtype": "float32",
+          "c_order_array_sha256": "b189e4b92d14b5455ce82887fc1d647075b64d6502be13f09cd3948ab2c88a35"
+        },
+        "hrmsi": {
+          "shape": [
+            288,
+            288,
+            3
+          ],
+          "dtype": "float32",
+          "c_order_array_sha256": "85bb95481183740add02649e2e47f19ab69ee550ba257e5d9f3308bb433877c9"
+        },
+        "lr2hsi": {
+          "shape": [
+            18,
+            18,
+            8
+          ],
+          "dtype": "float32",
+          "c_order_array_sha256": "fed83bc4dcc1565915b6e300a7d6bae552cb2f1e00a896fd4f4b969288d230da"
+        },
+        "lrmsi": {
+          "shape": [
+            72,
+            72,
+            3
+          ],
+          "dtype": "float32",
+          "c_order_array_sha256": "96c3516acec8583748905eed8eb451cd68671379cb528796311d2db2873c7e42"
+        }
+      },
+      "observation_source_run_id": "wadc_wv2_20260731_021814",
+      "scale": 4,
+      "preprocessing": {
+        "rows": [
+          0,
+          288
+        ],
+        "columns": [
+          0,
+          288
+        ],
+        "bands": [
+          0,
+          8
+        ],
+        "cast": "float32",
+        "additional_normalization": false,
+        "exact_array_match": true
+      },
+      "array_layout": "HWC",
+      "input_pair": [
+        "lrhsi",
+        "hrmsi"
+      ],
+      "reference_field": "hrhsi",
+      "selected_final_run_input_identity_verified": false
+    }
+  ],
+  "source_metadata": "release/sources.json",
+  "protocol_metadata": "release/protocol.json",
+  "reported_metrics": "paper_results.csv",
+  "reported_metrics_origin": "Transcribed manuscript values at display precision; not recomputed from predictions.",
+  "selected_final_run_input_identity_status": "unconfirmed",
+  "historical_observation_source_runs_and_selected_result_runs_may_differ": true,
+  "excluded_materials": [
+    "Duplicate MAT/NPY/NPZ representations",
+    "Full-band reference subset duplicates (selected references are embedded in the observation files)",
+    "Local audit backups",
+    "Internal run logs/configurations and absolute paths",
+    "Model code, weights and prediction images"
+  ]
+}

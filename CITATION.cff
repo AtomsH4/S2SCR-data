@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "Please cite the original dataset providers as well as this curated data repository."
+title: "S2SCR curated fusion data"
+type: dataset
+version: 1.0.0
+date-released: 2026-10-24
+authors:
+  - family-names: Gu
+    given-names: Jiaming
+  - family-names: Liu
+    given-names: Cong
+url: https://github.com/AtomsH4/S2SCR-data
+repository-code: https://github.com/AtomsH4/S2SCR-data
