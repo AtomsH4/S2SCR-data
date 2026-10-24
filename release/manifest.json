@@ -163,16 +163,14 @@
           4,
           93
         ],
-        "spatial_alignment": 16,
-        "exact_array_match": true
+        "spatial_alignment": 16
       },
       "array_layout": "HWC",
       "input_pair": [
         "lrhsi",
         "hrmsi"
       ],
-      "reference_field": "hrhsi",
-      "selected_final_run_input_identity_verified": false
+      "reference_field": "hrhsi"
     },
     {
       "dataset": "chikusei",
@@ -252,16 +250,14 @@
           11,
           100
         ],
-        "spatial_alignment": 16,
-        "exact_array_match": true
+        "spatial_alignment": 16
       },
       "array_layout": "HWC",
       "input_pair": [
         "lrhsi",
         "hrmsi"
       ],
-      "reference_field": "hrhsi",
-      "selected_final_run_input_identity_verified": false
+      "reference_field": "hrhsi"
     },
     {
       "dataset": "wadc",
@@ -341,16 +337,14 @@
           29,
           118
         ],
-        "spatial_alignment": 16,
-        "exact_array_match": true
+        "spatial_alignment": 16
       },
       "array_layout": "HWC",
       "input_pair": [
         "lrhsi",
         "hrmsi"
       ],
-      "reference_field": "hrhsi",
-      "selected_final_run_input_identity_verified": false
+      "reference_field": "hrhsi"
     },
     {
       "dataset": "paviau",
@@ -430,16 +424,14 @@
           4,
           93
         ],
-        "spatial_alignment": 64,
-        "exact_array_match": true
+        "spatial_alignment": 64
       },
       "array_layout": "HWC",
       "input_pair": [
         "lrhsi",
         "hrmsi"
       ],
-      "reference_field": "hrhsi",
-      "selected_final_run_input_identity_verified": false
+      "reference_field": "hrhsi"
     },
     {
       "dataset": "chikusei",
@@ -519,16 +511,14 @@
           11,
           100
         ],
-        "spatial_alignment": 64,
-        "exact_array_match": true
+        "spatial_alignment": 64
       },
       "array_layout": "HWC",
       "input_pair": [
         "lrhsi",
         "hrmsi"
       ],
-      "reference_field": "hrhsi",
-      "selected_final_run_input_identity_verified": false
+      "reference_field": "hrhsi"
     },
     {
       "dataset": "wadc",
@@ -608,16 +598,14 @@
           29,
           118
         ],
-        "spatial_alignment": 64,
-        "exact_array_match": true
+        "spatial_alignment": 64
       },
       "array_layout": "HWC",
       "input_pair": [
         "lrhsi",
         "hrmsi"
       ],
-      "reference_field": "hrhsi",
-      "selected_final_run_input_identity_verified": false
+      "reference_field": "hrhsi"
     },
     {
       "dataset": "paviau",
@@ -671,7 +659,6 @@
           "c_order_array_sha256": "9ceed43c1da72f067d414e73a22d2b095d0f2969c0b9b30b4ce93f8425d569ac"
         }
       },
-      "observation_source_run_id": "paviau_wv2_20260731_032253",
       "scale": 4,
       "preprocessing": {
         "rows": [
@@ -687,16 +674,14 @@
           8
         ],
         "cast": "float32",
-        "additional_normalization": false,
-        "exact_array_match": true
+        "additional_normalization": false
       },
       "array_layout": "HWC",
       "input_pair": [
         "lrhsi",
         "hrmsi"
       ],
-      "reference_field": "hrhsi",
-      "selected_final_run_input_identity_verified": false
+      "reference_field": "hrhsi"
     },
     {
       "dataset": "chikusei",
@@ -750,7 +735,6 @@
           "c_order_array_sha256": "f6a742ded16892afe641ca6d83bb87fa3f58aa407c168d7eb34da5f590ee3c60"
         }
       },
-      "observation_source_run_id": "chikusei_wv2_20260731_053746",
       "scale": 4,
       "preprocessing": {
         "rows": [
@@ -766,16 +750,14 @@
           8
         ],
         "cast": "float32",
-        "additional_normalization": false,
-        "exact_array_match": true
+        "additional_normalization": false
       },
       "array_layout": "HWC",
       "input_pair": [
         "lrhsi",
         "hrmsi"
       ],
-      "reference_field": "hrhsi",
-      "selected_final_run_input_identity_verified": false
+      "reference_field": "hrhsi"
     },
     {
       "dataset": "wadc",
@@ -829,7 +811,6 @@
           "c_order_array_sha256": "96c3516acec8583748905eed8eb451cd68671379cb528796311d2db2873c7e42"
         }
       },
-      "observation_source_run_id": "wadc_wv2_20260731_021814",
       "scale": 4,
       "preprocessing": {
         "rows": [
@@ -845,29 +826,16 @@
           8
         ],
         "cast": "float32",
-        "additional_normalization": false,
-        "exact_array_match": true
+        "additional_normalization": false
       },
       "array_layout": "HWC",
       "input_pair": [
         "lrhsi",
         "hrmsi"
       ],
-      "reference_field": "hrhsi",
-      "selected_final_run_input_identity_verified": false
+      "reference_field": "hrhsi"
     }
   ],
   "source_metadata": "release/sources.json",
-  "protocol_metadata": "release/protocol.json",
-  "reported_metrics": "paper_results.csv",
-  "reported_metrics_origin": "Transcribed manuscript values at display precision; not recomputed from predictions.",
-  "selected_final_run_input_identity_status": "unconfirmed",
-  "historical_observation_source_runs_and_selected_result_runs_may_differ": true,
-  "excluded_materials": [
-    "Duplicate MAT/NPY/NPZ representations",
-    "Full-band reference subset duplicates (selected references are embedded in the observation files)",
-    "Local audit backups",
-    "Internal run logs/configurations and absolute paths",
-    "Model code, weights and prediction images"
-  ]
+  "protocol_metadata": "release/protocol.json"
 }

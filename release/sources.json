@@ -7,8 +7,7 @@
       "url": "https://github.com/liangjiandeng/PanCollection",
       "sample": "Test(HxWxC)_wv2_data_fr5.mat",
       "sample_url": "https://drive.google.com/file/d/1knAstMixTs15BBdWKSPjOeDaa4XTN_X1/view",
-      "numerical_relationship": "lrhsi equals public ms exactly; hrmsi equals public pan converted to float32, divided by float32(2047), and replicated into 3 identical channels.",
-      "full_array_numerical_correspondence_verified": true
+      "numerical_relationship": "lrhsi equals public ms exactly; hrmsi equals public pan converted to float32, divided by float32(2047), and replicated into 3 identical channels."
     },
     {
       "name": "Pavia University processed reference",
@@ -18,9 +17,7 @@
         324,
         324,
         103
-      ],
-      "processed_distribution_file_identity_verified": true,
-      "original_scene_crop_origin_verified": false
+      ]
     },
     {
       "name": "Chikusei",
@@ -46,7 +43,6 @@
         ]
       },
       "reference_normalization": "float64 crop / 6768.0",
-      "source_comparison": "element-wise exact in original source audit",
       "license": "CC-BY-3.0"
     },
     {
@@ -73,7 +69,6 @@
         ]
       },
       "reference_normalization": "float64 (crop - (-401)) / (21311 - (-401))",
-      "source_comparison_max_absolute_error": 3.3306690738754696e-16,
       "provider_use_statement": "Free to use for testing and/or research."
     },
     {

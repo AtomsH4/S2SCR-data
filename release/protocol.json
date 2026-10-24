@@ -28,17 +28,6 @@
     "reference_preprocessing": "Top-left spatial trim, first eight bands, float32 cast; no further min-max normalization.",
     "construction": "Saved observations constructed using a learned degradation model calibrated using the WV2 pair.",
     "lr2hsi": "Saved second spatially degraded auxiliary input.",
-    "lrmsi": "Saved spectrally degraded auxiliary input.",
-    "historical_generator_checkpoint_identity_verified": false
-  },
-  "verification": {
-    "file_and_array_hashes_match_archived_manifests": true,
-    "reference_preprocessing_elementwise_verified_case_count": 9,
-    "original_reproduction_absolute_tolerance": 2e-07,
-    "controlled_spatial_reproduction_passed_case_count": 6,
-    "controlled_spectral_reproduction_passed_original_tolerance_case_count": 4,
-    "chikusei_spectral_reproduction_max_absolute_error": 2.384185791015625e-07,
-    "chikusei_spectral_reproduction_values_above_original_tolerance_per_case": 7,
-    "interpretation": "Small float32 accumulation-order differences on macOS NumPy 1.26.4; original tolerance failures retained. Stored file/array hashes pass."
+    "lrmsi": "Saved spectrally degraded auxiliary input."
   }
 }

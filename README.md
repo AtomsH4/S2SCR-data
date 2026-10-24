@@ -1,14 +1,12 @@
-# S2SCR curated fusion data
+# S2SCR data
 
-Curated reference images, degradation-estimation inputs, and simulated
-LR-HSI/HR-MSI observation pairs accompanying S2SCR hyperspectral–multispectral
-image fusion. Repository: https://github.com/AtomsH4/S2SCR-data.
+Reference images, calibration inputs, and LR-HSI/HR-MSI observation pairs for
+hyperspectral–multispectral image fusion.
 
-## Contents
+## Data files
 
-This repository distributes nine scene/setting combinations and three calibration
-inputs. Selected evaluation references are embedded in each observation file;
-separate copies of the full-band reference subsets are omitted.
+The package contains nine scene/setting combinations and three calibration
+inputs. Reference images are included in the observation files.
 
 | Scene | Setting | Reference HSI | LR-HSI | HR-MSI |
 | --- | --- | --- | --- | --- |
@@ -22,19 +20,19 @@ separate copies of the full-band reference subsets are omitted.
 | Chikusei | wv2 | 432×432×8 | 108×108×8 | 432×432×3 |
 | Washington DC Mall | wv2 | 288×288×8 | 72×72×8 | 288×288×3 |
 
-- release/observations/simx4/ and simx8/: six losslessly zipped original MAT files,
-  with gt, hrhsi, lrhsi, hrmsi, psf, srf and setting metadata. gt equals hrhsi.
-- release/observations/wv2/: three NPZ files, with hrhsi, lrhsi, hrmsi, lr2hsi and lrmsi.
-- release/calibration/: simx4.mat, simx8.mat and wv2.mat. Controlled calibration
-  pairs/operators equal the corresponding Pavia observations/operators.
-- release/manifest.json: shapes, array/file hashes and curation status.
-- release/protocol.json and release/sources.json: processing details and attribution.
-- paper_results.csv: 81 reported method/case results, transcribed at manuscript precision.
+- `release/observations/simx4/` and `simx8/`: losslessly zipped MAT files
+  containing `gt`, `hrhsi`, `lrhsi`, `hrmsi`, `psf`, and `srf`; `gt` equals `hrhsi`.
+- `release/observations/wv2/`: NPZ files containing `hrhsi`, `lrhsi`,
+  `hrmsi`, `lr2hsi`, and `lrmsi`.
+- `release/calibration/`: `simx4.mat`, `simx8.mat`, and `wv2.mat`.
+- `release/manifest.json`: file paths, array shapes, types, and hashes.
+- `release/protocol.json`: preprocessing and observation construction.
+- `release/sources.json`: original data sources and attribution.
 
-Image arrays use HWC layout and float32. The input pair is (lrhsi, hrmsi);
-hrhsi is the evaluation reference. The original WV2 calibration lrhsi is uint16.
-Its hrmsi is one PAN image divided by 2047 and replicated into three identical
-channels.
+Image arrays use HWC layout and float32, except the WV2 calibration `lrhsi`,
+which is uint16. Fusion inputs are `lrhsi` and `hrmsi`; the reference is
+`hrhsi`. The WV2 calibration `hrmsi` contains a PAN image divided by 2047
+and copied into three identical channels.
 
 ## Download and verify
 
@@ -44,48 +42,40 @@ cd S2SCR-data
 python3 verify_public_integrity.py
 ```
 
-All data are ordinary Git files; Git LFS is not required. MATLAB containers
-larger than GitHub's per-file limit are supplied as lossless ZIP archives.
-Their original uncompressed MAT hashes are recorded in release/manifest.json.
+All files use ordinary Git storage. ZIP files preserve the original MAT files;
+their uncompressed hashes are included in the manifest.
 
-To read a controlled case without extracting it to disk:
+## Load data
+
+Install NumPy and SciPy with `python3 -m pip install -r requirements.txt`.
 
 ```python
 from io import BytesIO
 from zipfile import ZipFile
 from scipy.io import loadmat
-
-with ZipFile('release/observations/simx4/paviau.mat.zip') as archive:
-    data = loadmat(BytesIO(archive.read('paviau_simx4.mat')))
-print(data['hrhsi'].shape, data['lrhsi'].shape, data['hrmsi'].shape)
-```
-
-To read a WV2-transferred case:
-
-```python
 import numpy as np
 
-with np.load('release/observations/wv2/paviau.npz', allow_pickle=False) as data:
-    print(data['hrhsi'].shape, data['lrhsi'].shape, data['hrmsi'].shape)
+with ZipFile("release/observations/simx4/paviau.mat.zip") as archive:
+    case = loadmat(BytesIO(archive.read("paviau_simx4.mat")))
+print(case["hrhsi"].shape, case["lrhsi"].shape, case["hrmsi"].shape)
+
+with np.load("release/observations/wv2/paviau.npz", allow_pickle=False) as case:
+    print(case["hrhsi"].shape, case["lrhsi"].shape, case["hrmsi"].shape)
 ```
 
-Install NumPy and SciPy using requirements.txt for these examples.
+## Sources and reuse
 
-## Original sources and terms
-
-- WV2: [PanCollection](https://github.com/liangjiandeng/PanCollection), full-resolution
-  test sample Test(HxWxC)_wv2_data_fr5.mat. Full-array numerical correspondence
-  is verified after PAN normalization and channel replication.
-- Pavia University processed reference: [NUD_PAF distribution](https://github.com/jeline0110/NUD_PAF/blob/2bbc506a982610c7b071a5c43000b84d6f7c959e/datasets/paviau.mat).
-- Chikusei: [University of Tokyo / Naoto Yokoya](https://naotoyokoya.com/Download.html).
-- Washington DC Mall: [Purdue University MultiSpec](https://engineering.purdue.edu/~biehl/MultiSpec/hyperspectral.html).
-- Sentinel-2A response curves: [Copernicus SentiWiki](https://sentiwiki.copernicus.eu/web/s2-documents), 2024 v4.0.
+Original providers are [NUD_PAF](https://github.com/jeline0110/NUD_PAF),
+[University of Tokyo](https://naotoyokoya.com/Download.html),
+[Purdue University](https://engineering.purdue.edu/~biehl/MultiSpec/hyperspectral.html),
+[PanCollection](https://github.com/liangjiandeng/PanCollection), and
+[Copernicus SentiWiki](https://sentiwiki.copernicus.eu/web/s2-documents).
+Exact source links and processing details are in `release/sources.json`.
 
 The authors gratefully acknowledge Space Application Laboratory, Department of
 Advanced Interdisciplinary Studies, the University of Tokyo for providing the
-hyperspectral data. Cite N. Yokoya and A. Iwasaki, technical report
-SAL-2016-05-27 (May 2016), for Chikusei.
+hyperspectral data. For Chikusei, cite N. Yokoya and A. Iwasaki, technical report
+SAL-2016-05-27 (May 2016).
 
-See TERMS.md for source-specific attribution and reuse terms. The MIT license
-covers the repository's original documentation and integrity-check helper;
-third-party imagery and its derived arrays retain the upstream terms.
+Third-party data retain the original providers' terms; see `TERMS.md`.
+`LICENSE` applies to the repository's original documentation and integrity helper.
