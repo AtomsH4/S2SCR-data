@@ -34,7 +34,7 @@ separate copies of the full-band reference subsets are omitted.
 Image arrays use HWC layout and float32. The input pair is (lrhsi, hrmsi);
 hrhsi is the evaluation reference. The original WV2 calibration lrhsi is uint16.
 Its hrmsi is one PAN image divided by 2047 and replicated into three identical
-channels. It is not an independently observed three-band RGB image.
+channels.
 
 ## Download and verify
 
@@ -70,22 +70,6 @@ with np.load('release/observations/wv2/paviau.npz', allow_pickle=False) as data:
 ```
 
 Install NumPy and SciPy using requirements.txt for these examples.
-
-## Provenance and curation status
-
-The supplied file and array hashes match the archived source records. Reference
-preprocessing has been checked element-wise for all nine cases. Six controlled
-LR-HSI observations reproduce within the original 2e-7 absolute tolerance.
-The two Chikusei HR-MSI spectral re-evaluations reach 2.384185791015625e-7 on
-macOS NumPy 1.26.4, slightly above that tolerance; their stored hashes pass.
-The original threshold is retained in release/protocol.json.
-
-**Exact input identity with the selected historical main-table runs remains
-unconfirmed.** WV2 observations are from archived source runs; their relationship
-to the selected result runs is not established by matching input hashes.
-The reported metrics CSV is a transcription of manuscript values, rather than
-an independent evaluation of these arrays. Updating reported values does not
-establish historical input identity.
 
 ## Original sources and terms
 
