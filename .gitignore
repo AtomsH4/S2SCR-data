@@ -18,11 +18,9 @@
 /release/calibration/*
 !/release/calibration/simx4.mat
 !/release/calibration/simx8.mat
-!/release/calibration/wv2.mat
 /release/observations/*
 !/release/observations/simx4/
 !/release/observations/simx8/
-!/release/observations/wv2/
 /release/observations/simx4/*
 !/release/observations/simx4/paviau.mat.zip
 !/release/observations/simx4/chikusei.mat.zip
@@ -31,7 +29,3 @@
 !/release/observations/simx8/paviau.mat.zip
 !/release/observations/simx8/chikusei.mat.zip
 !/release/observations/simx8/wadc.mat.zip
-/release/observations/wv2/*
-!/release/observations/wv2/paviau.npz
-!/release/observations/wv2/chikusei.npz
-!/release/observations/wv2/wadc.npz

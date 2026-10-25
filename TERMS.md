@@ -15,10 +15,6 @@ observation arrays, spectral-response data, or third-party publications.
 - Pavia University: the processed reference matches the NUD_PAF distribution
   identified in release/sources.json. Consult that distribution and the original
   imagery provider for applicable terms; no new blanket imagery license is assigned.
-- WV2: the calibration arrays numerically correspond to PanCollection
-  full-resolution test sample 5 after the documented conversion. PanCollection's
-  software license is not represented here as a new license for satellite imagery.
-  Original provider terms continue to apply: https://github.com/liangjiandeng/PanCollection.
 - Sentinel-2A response functions: credit Copernicus / ESA and the 2024 v4.0
   spectral-response workbook at https://sentiwiki.copernicus.eu/web/s2-documents.
 

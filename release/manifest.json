@@ -4,9 +4,9 @@
   "version": "1.0.0",
   "repository_url": "https://github.com/AtomsH4/S2SCR-data",
   "created_at_utc": "2026-10-24T08:30:18.100767+00:00",
-  "scope": "Nine curated scene/setting combinations and three degradation-estimation input pairs.",
-  "case_count": 9,
-  "calibration_input_count": 3,
+  "scope": "Six curated scene/setting combinations and two degradation-estimation input pairs.",
+  "case_count": 6,
+  "calibration_input_count": 2,
   "data_files": [
     {
       "path": "release/observations/simx4/paviau.mat.zip",
@@ -51,21 +51,6 @@
       "uncompressed_mat_sha256": "478b0f88a2d2c9124838e0e2a942246e7c4ca23d4b8835310a31411f63fca659"
     },
     {
-      "path": "release/observations/wv2/paviau.npz",
-      "bytes": 2788448,
-      "sha256": "bad62af80f9488b5ffce1156acd67ce52f5e48dfe44ffacfc29d97d41d8da479"
-    },
-    {
-      "path": "release/observations/wv2/chikusei.npz",
-      "bytes": 4293117,
-      "sha256": "713d8ac2a9846868a309ad59ae6894360e874a4ffe0a9aeec287fec688a33f9e"
-    },
-    {
-      "path": "release/observations/wv2/wadc.npz",
-      "bytes": 1871976,
-      "sha256": "fd291d5dd2f010c55e440e2f875c08e5126b20291996e3676c38a87e584b844f"
-    },
-    {
       "path": "release/calibration/simx4.mat",
       "bytes": 3919360,
       "sha256": "9d22c5681527caa2ec86990c56f42635c61cfc2e1b920efad781c694f5f9501d",
@@ -75,12 +60,6 @@
       "path": "release/calibration/simx8.mat",
       "bytes": 2211264,
       "sha256": "ed58af1a2138f38d31606d1d839153b9619d55f6bf7e29565a4272a8df404c6a",
-      "role": "degradation_estimation_input"
-    },
-    {
-      "path": "release/calibration/wv2.mat",
-      "bytes": 3408144,
-      "sha256": "535df8cc9b06237f3b2de430466e5984ee9f72c38b9b743c62704035a6efad5a",
       "role": "degradation_estimation_input"
     }
   ],
@@ -599,234 +578,6 @@
           118
         ],
         "spatial_alignment": 64
-      },
-      "array_layout": "HWC",
-      "input_pair": [
-        "lrhsi",
-        "hrmsi"
-      ],
-      "reference_field": "hrhsi"
-    },
-    {
-      "dataset": "paviau",
-      "setting": "wv2",
-      "format": "npz",
-      "path": "release/observations/wv2/paviau.npz",
-      "arrays": {
-        "hrhsi": {
-          "shape": [
-            320,
-            320,
-            8
-          ],
-          "dtype": "float32",
-          "c_order_array_sha256": "b5463b45057a48a6c9a53bc1ba46aad06a156e8d0bb38801faecb3e95d1157c0"
-        },
-        "lrhsi": {
-          "shape": [
-            80,
-            80,
-            8
-          ],
-          "dtype": "float32",
-          "c_order_array_sha256": "cac8f0d67b5a99ece6ed41bf2d237d53322f788c2b076533137ca1b571b7249d"
-        },
-        "hrmsi": {
-          "shape": [
-            320,
-            320,
-            3
-          ],
-          "dtype": "float32",
-          "c_order_array_sha256": "0399fe17d4245a8a89ad98aeb9b6dffa6c2ec86fd82d59720671b0f25d760180"
-        },
-        "lr2hsi": {
-          "shape": [
-            20,
-            20,
-            8
-          ],
-          "dtype": "float32",
-          "c_order_array_sha256": "de392b58a0aaa050e9ed558c81eca40908866a4faab0c3e6bfa77e2762efd20a"
-        },
-        "lrmsi": {
-          "shape": [
-            80,
-            80,
-            3
-          ],
-          "dtype": "float32",
-          "c_order_array_sha256": "9ceed43c1da72f067d414e73a22d2b095d0f2969c0b9b30b4ce93f8425d569ac"
-        }
-      },
-      "scale": 4,
-      "preprocessing": {
-        "rows": [
-          0,
-          320
-        ],
-        "columns": [
-          0,
-          320
-        ],
-        "bands": [
-          0,
-          8
-        ],
-        "cast": "float32",
-        "additional_normalization": false
-      },
-      "array_layout": "HWC",
-      "input_pair": [
-        "lrhsi",
-        "hrmsi"
-      ],
-      "reference_field": "hrhsi"
-    },
-    {
-      "dataset": "chikusei",
-      "setting": "wv2",
-      "format": "npz",
-      "path": "release/observations/wv2/chikusei.npz",
-      "arrays": {
-        "hrhsi": {
-          "shape": [
-            432,
-            432,
-            8
-          ],
-          "dtype": "float32",
-          "c_order_array_sha256": "551838fe19c435518e0e3a5c6b1d7de98d9427d9408cfe33912112f4690b3f3b"
-        },
-        "lrhsi": {
-          "shape": [
-            108,
-            108,
-            8
-          ],
-          "dtype": "float32",
-          "c_order_array_sha256": "e23d83abe4f96dc340fe7751a185c2d3a3d1cb3d55830fb8e9901ba12b68ea79"
-        },
-        "hrmsi": {
-          "shape": [
-            432,
-            432,
-            3
-          ],
-          "dtype": "float32",
-          "c_order_array_sha256": "32a166ccec613932c9d376916ed40ffe4d585b481eccb996a4671ad488f6f6e9"
-        },
-        "lr2hsi": {
-          "shape": [
-            27,
-            27,
-            8
-          ],
-          "dtype": "float32",
-          "c_order_array_sha256": "e486d4eefced88ce0b2d1f5d7954e71f18fac6b37efbad9b7d57d142f7e20b1a"
-        },
-        "lrmsi": {
-          "shape": [
-            108,
-            108,
-            3
-          ],
-          "dtype": "float32",
-          "c_order_array_sha256": "f6a742ded16892afe641ca6d83bb87fa3f58aa407c168d7eb34da5f590ee3c60"
-        }
-      },
-      "scale": 4,
-      "preprocessing": {
-        "rows": [
-          0,
-          432
-        ],
-        "columns": [
-          0,
-          432
-        ],
-        "bands": [
-          0,
-          8
-        ],
-        "cast": "float32",
-        "additional_normalization": false
-      },
-      "array_layout": "HWC",
-      "input_pair": [
-        "lrhsi",
-        "hrmsi"
-      ],
-      "reference_field": "hrhsi"
-    },
-    {
-      "dataset": "wadc",
-      "setting": "wv2",
-      "format": "npz",
-      "path": "release/observations/wv2/wadc.npz",
-      "arrays": {
-        "hrhsi": {
-          "shape": [
-            288,
-            288,
-            8
-          ],
-          "dtype": "float32",
-          "c_order_array_sha256": "cf3e32bf204b95b7b7ae4060fa0d1a16eae1ad77161a0c8e4fbdbcfe167b91f6"
-        },
-        "lrhsi": {
-          "shape": [
-            72,
-            72,
-            8
-          ],
-          "dtype": "float32",
-          "c_order_array_sha256": "b189e4b92d14b5455ce82887fc1d647075b64d6502be13f09cd3948ab2c88a35"
-        },
-        "hrmsi": {
-          "shape": [
-            288,
-            288,
-            3
-          ],
-          "dtype": "float32",
-          "c_order_array_sha256": "85bb95481183740add02649e2e47f19ab69ee550ba257e5d9f3308bb433877c9"
-        },
-        "lr2hsi": {
-          "shape": [
-            18,
-            18,
-            8
-          ],
-          "dtype": "float32",
-          "c_order_array_sha256": "fed83bc4dcc1565915b6e300a7d6bae552cb2f1e00a896fd4f4b969288d230da"
-        },
-        "lrmsi": {
-          "shape": [
-            72,
-            72,
-            3
-          ],
-          "dtype": "float32",
-          "c_order_array_sha256": "96c3516acec8583748905eed8eb451cd68671379cb528796311d2db2873c7e42"
-        }
-      },
-      "scale": 4,
-      "preprocessing": {
-        "rows": [
-          0,
-          288
-        ],
-        "columns": [
-          0,
-          288
-        ],
-        "bands": [
-          0,
-          8
-        ],
-        "cast": "float32",
-        "additional_normalization": false
       },
       "array_layout": "HWC",
       "input_pair": [

@@ -2,14 +2,6 @@
   "coordinate_convention": "zero-based, stop-exclusive",
   "sources": [
     {
-      "name": "WV2 calibration input",
-      "provider": "PanCollection",
-      "url": "https://github.com/liangjiandeng/PanCollection",
-      "sample": "Test(HxWxC)_wv2_data_fr5.mat",
-      "sample_url": "https://drive.google.com/file/d/1knAstMixTs15BBdWKSPjOeDaa4XTN_X1/view",
-      "numerical_relationship": "lrhsi equals public ms exactly; hrmsi equals public pan converted to float32, divided by float32(2047), and replicated into 3 identical channels."
-    },
-    {
       "name": "Pavia University processed reference",
       "provider": "NUD_PAF",
       "url": "https://github.com/jeline0110/NUD_PAF/blob/2bbc506a982610c7b071a5c43000b84d6f7c959e/datasets/paviau.mat",

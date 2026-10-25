@@ -23,11 +23,5 @@
     "spectral_operation": "numpy.tensordot(gt, srf.T, axes=([2], [0])).astype(float32)",
     "added_noise": false,
     "psf_srf_storage": "Embedded in each controlled MAT; calibration MATs also contain the corresponding operators."
-  },
-  "wv2_transferred": {
-    "reference_preprocessing": "Top-left spatial trim, first eight bands, float32 cast; no further min-max normalization.",
-    "construction": "Saved observations constructed using a learned degradation model calibrated using the WV2 pair.",
-    "lr2hsi": "Saved second spatially degraded auxiliary input.",
-    "lrmsi": "Saved spectrally degraded auxiliary input."
   }
 }
